@@ -28,6 +28,14 @@ class Contact
     new_contact
   end
 
+  def add_number(phone_number)
+    @phone << phone_number
+  end
+
+  def add_address(address)
+    @address << address
+  end
+
   def show_phone
     @phone
   end
