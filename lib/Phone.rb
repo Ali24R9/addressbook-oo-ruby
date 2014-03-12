@@ -9,6 +9,10 @@ class Phone
     @all_numbers
   end
 
+  # def add_phone(phone_number)
+  #   @phone << phone_number
+  # end
+
   def save
     @all_numbers << self
   end

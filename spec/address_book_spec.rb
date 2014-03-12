@@ -17,16 +17,17 @@ describe Contact do
   end
 
   it 'should save the contact to the list of contacts' do
-      test_contact = Contact.new('jack', 'john')
-      test_contact.save
-      Contact.all.should eq [test_contact]
-    end
-
-  it 'should add a new phone number' do
     test_contact = Contact.new('jack', 'john')
-    test_phone = Phone.new('4455966897')
-    test_contact.add_number(test_phone)
-    test_contact.show_phone.should eq [test_phone]
+    test_contact.save
+    Contact.all.should eq [test_contact]
+  end
+  describe '#add_number' do
+    it 'should add a new phone number' do
+      test_contact = Contact.new('jack', 'john')
+      test_phone = Phone.new('4455966897')
+      test_contact.add_number(test_phone)
+      test_contact.show_phone.should eq [test_phone]
+    end
   end
 
   describe '.all' do
@@ -68,7 +69,7 @@ describe Phone do
   describe '#all' do
     it 'should be empty to begin with' do
       test_phone = Phone.new('4432355887')
-      test_phone.all.should eq []
+      Phone.all.should eq []
     end
   end
 
@@ -139,3 +140,7 @@ describe Email do
     end
   end
 end
+
+
+
+

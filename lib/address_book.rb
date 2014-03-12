@@ -5,9 +5,9 @@ class Contact
   def initialize(first_name, last_name)
     @first_name = first_name
     @last_name = last_name
-    @phone = []
-    @address = []
-    @email = []
+    @phones = []
+    @addresses = []
+    @emails = []
   end
 
   def Contact.all
@@ -29,23 +29,27 @@ class Contact
   end
 
   def add_number(phone_number)
-    @phone << phone_number
+    @phones << phone_number
   end
 
   def add_address(address)
-    @address << address
+    @addresses << address
   end
 
-  def show_phone
-    @phone
+  def add_emails(email)
+    @emails << email
   end
 
-  def show_address
-    @address
+  def show_phones
+    @phones
   end
 
-  def show_email
-    @email
+  def show_addresses
+    @addresses
+  end
+
+  def show_emails
+    @emails
   end
 
   def show_name
